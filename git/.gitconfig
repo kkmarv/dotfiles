@@ -1,10 +1,33 @@
-[core]
-	commentChar = ";"
-
-[credential]
-	helper = store
-
 [alias]
 	plog = log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	# Show colored log with graph and relative timestamps.
+
 	pushfwl = push --force-with-lease
+	# Force-push safely.
+
 	undo = reset --soft HEAD^
+	# Undo the latest commit.
+
+	tags = tag -l
+	branches = branch --all
+	remotes = remote --verbose
+	# Show verbose output about tags, branches or remotes.
+
+	aliases = config --get-regexp alias
+	# List aliases.
+
+	amend = commit --amend --reuse-message=HEAD
+	# Amend the currently staged files to the latest commit.
+
+	contributors = shortlog --summary --numbered
+	# List contributors with number of commits.
+
+	whoami = config user.email
+	# Show the user email for the current repository.
+
+[branch]
+	sort = -committerdate
+	# Show most recently changed branches first.
+
+[core]
+	commentChar = ";"
