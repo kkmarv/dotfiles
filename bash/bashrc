@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+
+## Shell Options ##
+shopt -s histappend
+shopt -s cmdhist
+shopt -s checkwinsize
+
+## History ##
+HISTSIZE=1000
+HISTFILESIZE=2000
+HISTCONTROL=ignoreboth
+HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S  "
+
+
+## Imports ##
+XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+[[ -f "$XDG_CONFIG_HOME/bash/bash_aliases" ]] && . "$XDG_CONFIG_HOME/bash/bash_aliases"
+[[ -f "$XDG_CONFIG_HOME/bash/bash_functions" ]] && . "$XDG_CONFIG_HOME/bash/bash_functions"
+[[ -f "$XDG_CONFIG_HOME/bash/bash_completions" ]] && . "$XDG_CONFIG_HOME/bash/bash_completions"
