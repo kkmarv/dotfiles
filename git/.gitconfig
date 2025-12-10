@@ -2,7 +2,7 @@
 	plog = log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 	# Show colored log with graph and relative timestamps.
 
-	pushfwl = push --force-with-lease
+	fpush = push --force-with-lease
 	# Force-push safely.
 
 	undo = reset --soft HEAD^

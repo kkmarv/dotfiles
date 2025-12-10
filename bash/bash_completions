@@ -1,7 +1,0 @@
-#!/bin/bash
-
-eval "$(direnv hook bash)"
-eval "$(helm completion bash)"
-eval "$(helmfile completion bash)"
-# eval "$(just --completions bash)"
-eval "$(kubectl completion bash)"
