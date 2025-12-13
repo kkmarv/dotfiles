@@ -17,6 +17,7 @@ fi
 CURRENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 
+mkdir -p "$XDG_CONFIG_HOME/bash/"
 ln -sf "$CURRENT_DIR/bashrc" "$XDG_CONFIG_HOME/bash/bashrc"
 ln -sf "$CURRENT_DIR/bash_aliases" "$XDG_CONFIG_HOME/bash/bash_aliases"
 ln -sf "$CURRENT_DIR/bash_completions" "$XDG_CONFIG_HOME/bash/bash_completions"
