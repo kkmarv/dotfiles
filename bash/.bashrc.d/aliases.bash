@@ -11,3 +11,6 @@ alias reload='exec ${SHELL} -l'
 
 # Navigation
 alias ..='cd ..'
+
+alias ls='ls --color=auto'
+alias ll='ls -lAh'
