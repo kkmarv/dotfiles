@@ -24,10 +24,10 @@
 
 	whoami = config user.email
 	# Show the user email for the current repository.
-
 [branch]
 	sort = -committerdate
 	# Show most recently changed branches first.
-
 [core]
 	commentChar = ";"
+[init]
+	defaultBranch = main
