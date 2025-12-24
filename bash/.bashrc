@@ -13,3 +13,6 @@ fi
 
 # Load starship
 eval "$(starship init bash)"
+
+# Load direnv
+eval "$(direnv hook bash)"
