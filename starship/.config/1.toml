@@ -1,0 +1,64 @@
+"$schema" = "https://starship.rs/config-schema.json"
+
+format = """\
+$git_branch\
+$git_status\
+$c\
+$cpp\
+$golang\
+$java\
+$nodejs\
+$python\
+$rust
+$time @ $battery $memory_usage
+$os $username[@](black)$hostname $directory
+$character
+"""
+
+[[battery.display]]
+threshold = 100
+
+[git_branch]
+symbol = ""
+style = "bold purple"
+format = "[$symbol $branch]($style) "
+
+[hostname]
+ssh_only = false
+format = "[$hostname]($style)"
+style = "purple dimmed bold"
+
+[kubernetes]
+disabled = false
+
+# [localip]
+# disabled = false
+# ssh_only = false
+
+[memory_usage]
+disabled = false
+threshold = -1
+style = "bold dimmed green"
+symbol = ""
+format = "$symbol [${ram}]($style)"
+
+[os]
+disabled = false
+style = "black"
+
+[os.symbols]
+Debian = ""
+Raspbian = ""
+Ubuntu = ""
+Unknown = ""
+Windows = ""
+
+[time]
+disabled = false
+format = "[$time]($style)"
+style = "bold black"
+
+[username]
+show_always = true
+format = "[$user]($style)"
+style_user = "blue bold"
