@@ -3,7 +3,9 @@ alias c='clear'
 alias d='docker'
 alias h='helm'
 alias hf='helmfile'
+
 alias k='kubectl'
+alias kc='kubectl config use-context'
 
 alias g='git'
 alias ga='git add'
