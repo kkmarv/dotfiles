@@ -19,6 +19,10 @@ npm ci
 2. direnv
 3. nvm
 
+## Nerd Font
+
+[Hack](https://www.programmingfonts.org/#hack)
+
 ## Color Theme
 
 - [iTerm2-Color-Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes) repo
