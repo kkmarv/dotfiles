@@ -5,7 +5,7 @@ alias h='helm'
 alias hf='helmfile'
 
 alias k='kubectl'
-alias kc='kubectl config use-context'
+alias kd='kubectl run netshoot --image=nicolaka/netshoot -i --tty --rm'
 
 alias g='git'
 alias ga='git add'
@@ -14,14 +14,16 @@ alias gd='git diff'
 alias gs='git status'
 
 # Wrapper
-alias ..='cd ..'
 alias ...='cd ../..'
-alias dmesg='dmesg --color=always'
-alias ip='ip --color'
-alias less='less -R'
+alias ..='cd ..'
+alias dmesg='dmesg -L=always'
+alias ip='ip -c'
+alias jq='jq -C'
+alias less='less -RF'
 alias ll='ls -lAh'
 alias ls='ls --color'
 alias mkdir='mkdir -p'
+alias yq='yq -C'
 
 # Utility
 alias week='date +%V'
