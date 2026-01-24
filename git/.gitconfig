@@ -29,5 +29,8 @@
 	# Show most recently changed branches first.
 [core]
 	commentChar = ";"
+	excludesFile = /home/marvin/.gitignore_global
 [init]
 	defaultBranch = main
+[credential]
+	helper = store

@@ -16,6 +16,7 @@ alias gs='git status'
 # Wrapper
 alias ...='cd ../..'
 alias ..='cd ..'
+alias cat=bat
 alias dmesg='dmesg -L=always'
 alias ip='ip -c'
 alias jq='jq -C'
