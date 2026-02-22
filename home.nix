@@ -1,6 +1,17 @@
 { lib, pkgs, ... }: {
   home = {
-    packages = with pkgs; [ home-manager nixfmt cowsay lolcat ];
+    packages = with pkgs; [
+      home-manager
+      nixfmt
+      cowsay
+      lolcat
+      htop
+      jq
+      yq
+      bat
+      direnv
+      starship
+    ];
 
     username = "marvin";
     homeDirectory = "/home/marvin";
