@@ -11,6 +11,7 @@
       bat
       direnv
       starship
+      just
     ];
 
     username = "marvin";
