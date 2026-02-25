@@ -11,7 +11,6 @@
 
   home.packages = with pkgs; [
     home-manager
-    nixfmt
     cowsay
     lolcat
     htop
