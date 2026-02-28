@@ -32,4 +32,10 @@ Follow these steps once to setup a new environment.
 
 - [simple-homemanager](https://github.com/Evertras/simple-homemanager/tree/main) -  A practical guide to getting started with home manager with flakes and all that 2024 goodness.
 
-    I've followed this tutorial and can say that it really cuts through the noise of Nix. Can highly recommend it for beginners.
+    I've followed this tutorial and can say that it really cuts through the noise of typical Nix documentation. Can highly recommend it for beginners.
+
+<!-- 
+- Home Manager options [list](https://nix-community.github.io/home-manager/options.xhtml)
+- <https://mynixos.com/>
+- <https://repology.org/repositories/graphs>
+-->
