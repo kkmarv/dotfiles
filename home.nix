@@ -7,8 +7,6 @@
   # Don't ever change this after the first build.  Don't ask questions.
   home.stateVersion = "25.11";
 
-  home.shell.enableShellIntegration = true;
-
   home.packages = with pkgs; [
     home-manager
     cowsay
@@ -20,6 +18,40 @@
     just
   ];
 
+  home.shellAliases = {
+    c = "clear";
+    d = "docker";
+    h = "helm";
+    hf = "helmfile";
+
+    k = "kubectl";
+    kd = "kubectl run netshoot --image=nicolaka/netshoot -i --tty --rm";
+
+    g = "git";
+    ga = "git add";
+    gc = "git commit";
+    gd = "git diff";
+    gs = "git status";
+
+    # Wrapper
+    "..." = "cd ../..";
+    ".." = "cd ..";
+    cat = "bat";
+    dmesg = "dmesg -L=always";
+    ip = "ip -c";
+    jq = "jq -C";
+    less = "less -RF";
+    ll = "ls -lAh";
+    ls = "ls --color";
+    mkdir = "mkdir -p";
+    yq = "yq -C";
+
+    # Utility
+    week = "date +%V";
+    reload = "exec \${SHELL} -l";
+    ipinfo = ''echo "Internal: $(ip route get 1.1.1.1 | awk "{print $7}")"; echo "External: $(curl -s https://ifconfig.me)"'';
+  };
+
   programs = {
     bash.enable = true;
     bash.initExtra = ''
@@ -27,39 +59,6 @@
       bind 'set show-all-if-ambiguous on'
       bind 'set menu-complete-display-prefix on'
     '';
-    bash.shellAliases = {
-      c = "clear";
-      d = "docker";
-      h = "helm";
-      hf = "helmfile";
-
-      k = "kubectl";
-      kd = "kubectl run netshoot --image=nicolaka/netshoot -i --tty --rm";
-
-      g = "git";
-      ga = "git add";
-      gc = "git commit";
-      gd = "git diff";
-      gs = "git status";
-
-      # Wrapper
-      "..." = "cd ../..";
-      ".." = "cd ..";
-      cat = "bat";
-      dmesg = "dmesg -L=always";
-      ip = "ip -c";
-      jq = "jq -C";
-      less = "less -RF";
-      ll = "ls -lAh";
-      ls = "ls --color";
-      mkdir = "mkdir -p";
-      yq = "yq -C";
-
-      # Utility
-      week = "date +%V";
-      reload = "exec \${SHELL} -l";
-      ipinfo = ''echo "Internal: $(ip route get 1.1.1.1 | awk "{print $7}")"; echo "External: $(curl -s https://ifconfig.me)"'';
-    };
 
     git.enable = true;
     git.ignores = [ ".env" ];
