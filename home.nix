@@ -107,7 +107,6 @@
     };
 
     direnv.enable = true;
-    # direnv.nix-direnv.enable = true; TODO check this out
     direnv.config = {
       global.load_dotenv = true;
       whitelist.prefix = [ "/home/marvin/dev" ];

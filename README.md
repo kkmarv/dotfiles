@@ -4,7 +4,9 @@
 
 Follow these steps once to setup a new environment.
 
-1. Install [Nix](https://nixos.org/download/).
+1. Clone this repository.
+
+2. Install [Nix](https://nixos.org/download/).
 
     Add `experimental-features = nix-command flakes` to `/etc/nix/nix.conf`. Create the file if it does not exist already.
 
@@ -14,9 +16,9 @@ Follow these steps once to setup a new environment.
     nix run nixpkgs#hello
     ```
 
-2. Install [Home Manager](https://nix-community.github.io/home-manager/index.xhtml). If you're here reading this, you want the *standalone*.
+3. Install [Home Manager](https://nix-community.github.io/home-manager/index.xhtml). If you're here reading this, you want the *standalone*.
 
-    Make sure to follow step 4 and add `. ~/.nix-profile/etc/profile.d/nix.sh` to your `~/.profile`.
+    Skip step 4. You want HM to manage your shell config. As long as you do not close your current shell session, this will be fine.  
 
     Can you run this?
 
@@ -24,7 +26,7 @@ Follow these steps once to setup a new environment.
     home-manager --version
     ```
 
-3. Enable the default Nix profile once.
+4. Enable my default Nix profile once.
 
     ```sh
     home-manager switch --flake .#default
@@ -36,7 +38,7 @@ Follow these steps once to setup a new environment.
 
 - [simple-homemanager](https://github.com/Evertras/simple-homemanager/tree/main) -  A practical guide to getting started with home manager with flakes and all that 2024 goodness.
 
-    I've followed this tutorial and can say that it really cuts through the noise of typical Nix documentation. Can highly recommend it for beginners.
+    I've followed this tutorial and can say that it really cuts through the noise of typical Nix documentation. Can *highly recommend* it for beginners.
 
 <!-- 
 - Home Manager options [list](https://nix-community.github.io/home-manager/options.xhtml)
