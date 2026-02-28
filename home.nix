@@ -6,6 +6,7 @@
   # You do not need to change this if you're reading this in the future.
   # Don't ever change this after the first build.  Don't ask questions.
   home.stateVersion = "25.11";
+  home.preferXdgDirectories = true;
 
   home.packages = with pkgs; [
     home-manager
@@ -31,6 +32,7 @@
     ga = "git add";
     gc = "git commit";
     gd = "git diff";
+    gp = "git push";
     gs = "git status";
 
     # Wrapper
@@ -74,6 +76,7 @@
       credential.helper = "store";
       fetch.prune = true;
       init.defaultBranch = "main";
+      rebase.autostash = true;
       alias = {
         plog = "log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative";
         # Show colored log with graph and relative timestamps.
