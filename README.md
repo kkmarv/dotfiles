@@ -5,9 +5,8 @@
 Follow these steps once to setup a new environment.
 
 1. Install [Nix](https://nixos.org/download/).
-2. Add `. ~/.nix-profile/etc/profile.d/nix.sh` to your `~/.profile`.
 
-3. Add `experimental-features = nix-command flakes` to `/etc/nix/nix.conf`. Create the file if it does not exist already.
+    Add `experimental-features = nix-command flakes` to `/etc/nix/nix.conf`. Create the file if it does not exist already.
 
     Can your run this?
 
@@ -15,7 +14,9 @@ Follow these steps once to setup a new environment.
     nix run nixpkgs#hello
     ```
 
-4. Install [Home Manager](https://nix-community.github.io/home-manager/index.xhtml). If you're here reading this, you want the *standalone*. Make sure to follow step 4.
+2. Install [Home Manager](https://nix-community.github.io/home-manager/index.xhtml). If you're here reading this, you want the *standalone*.
+
+    Make sure to follow step 4 and add `. ~/.nix-profile/etc/profile.d/nix.sh` to your `~/.profile`.
 
     Can you run this?
 
@@ -23,11 +24,13 @@ Follow these steps once to setup a new environment.
     home-manager --version
     ```
 
-5. Enable the default Nix profile once.
+3. Enable the default Nix profile once.
 
     ```sh
     home-manager switch --flake .#default
     ```
+
+    From here on everything should go smoothly.
 
 ## References
 
