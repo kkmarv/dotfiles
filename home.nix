@@ -67,7 +67,7 @@
     '';
 
     git.enable = true;
-    git.ignores = [ ".env" ];
+    git.ignores = [ ".env" ".envrc" ];
     git.settings = {
       # user.email = "web@kkmarv.dev";
       # user.name = "Marvin";
