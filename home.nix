@@ -13,8 +13,7 @@
     cowsay
     lolcat
     htop
-    jq
-    yq
+    yq-go
     bat
     just
   ];
