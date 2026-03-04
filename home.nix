@@ -15,7 +15,6 @@
     htop
     just
     kubectl
-    kubernetes-helm
     lolcat
     yq-go
   ];
