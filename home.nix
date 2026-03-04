@@ -9,13 +9,15 @@
   home.preferXdgDirectories = true;
 
   home.packages = with pkgs; [
-    home-manager
-    cowsay
-    lolcat
-    htop
-    yq-go
     bat
+    cowsay
+    home-manager
+    htop
     just
+    kubectl
+    kubernetes-helm
+    lolcat
+    yq-go
   ];
 
   home.shellAliases = {
@@ -66,7 +68,10 @@
     '';
 
     git.enable = true;
-    git.ignores = [ ".env" ".envrc" ];
+    git.ignores = [
+      ".env"
+      ".envrc"
+    ];
     git.settings = {
       # user.email = "web@kkmarv.dev";
       # user.name = "Marvin";
@@ -110,6 +115,9 @@
       global.load_dotenv = true;
       whitelist.prefix = [ "/home/marvin/dev" ];
     };
+
+    kubeswitch.enable = true;
+    kubeswitch.commandName = "ks";
 
     starship.enable = true;
     starship.settings = {
