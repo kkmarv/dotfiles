@@ -70,6 +70,7 @@
     git.ignores = [
       ".env"
       ".envrc"
+      ".vscode"
     ];
     git.settings = {
       # user.email = "web@kkmarv.dev";
