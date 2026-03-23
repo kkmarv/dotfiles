@@ -34,11 +34,20 @@ Follow these steps once to setup a new environment.
 
     From here on everything should go smoothly.
 
+## Customizations
+
+|                       |                                                                                                                                                                     |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Editor Font           | [Cascadia Code NF Regular](https://www.programmingfonts.org/#cascadia-code)                                                                                         |
+| Terminal Color Scheme | [xcad](https://github.com/ChristianLempa/dotfiles-win/blob/0f166e444c90a6a307aa7797bb2314d420ba5d8a/windows-terminal-settings.json#L68C9-L90C10) by Christian Lempa |
+
 ## References
 
-- [simple-homemanager](https://github.com/Evertras/simple-homemanager/tree/main) -  A practical guide to getting started with home manager with flakes and all that 2024 goodness.
+- [simple-homemanager](https://github.com/Evertras/simple-homemanager/tree/main) - A practical guide to getting started with home manager with flakes and all that 2024 goodness.
 
     I've followed this tutorial and can say that it really cuts through the noise of typical Nix documentation. Can *highly recommend* it for beginners.
+
+- [nerdfonts.com](https://www.nerdfonts.com/font-downloads)
 
 <!-- 
 - Home Manager options [list](https://nix-community.github.io/home-manager/options.xhtml)
