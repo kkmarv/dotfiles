@@ -11,10 +11,12 @@
   home.packages = with pkgs; [
     bat
     cowsay
+    chafa
     home-manager
     htop
     just
     kubectl
+    tldr
     lolcat
     yq-go
   ];
