@@ -10,8 +10,8 @@
 
   home.packages = with pkgs; [
     bat
-    cowsay
     chafa
+    cowsay
     home-manager
     htop
     just
@@ -40,13 +40,11 @@
     # Wrapper
     "..." = "cd ../..";
     ".." = "cd ..";
-    cat = "bat";
     dmesg = "dmesg -L=always";
     ip = "ip -c";
     jq = "jq -C";
     less = "less -RF";
-    ll = "ls -lAh";
-    ls = "ls --color";
+    ls = "eza";
     mkdir = "mkdir -p";
     yq = "yq -C";
 
@@ -120,6 +118,10 @@
 
     kubeswitch.enable = true;
     kubeswitch.commandName = "ks";
+
+    eza.enable = true;
+    eza.git = true;
+    eza.icons = "auto";
 
     starship.enable = true;
     starship.settings = {
