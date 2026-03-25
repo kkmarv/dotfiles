@@ -70,6 +70,7 @@
     git.ignores = [
       ".env"
       ".envrc"
+      ".venv"
       ".vscode"
     ];
     git.settings = {
