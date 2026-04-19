@@ -16,6 +16,8 @@
     in
     {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-tree;
+      # experimental "nix fmt" command, see https://github.com/NixOS/nixfmt#nix-fmt-experimental
+      
       homeConfigurations.default = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [ ./home.nix ];
